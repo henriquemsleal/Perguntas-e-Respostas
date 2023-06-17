@@ -63,16 +63,5 @@ app.post('/salvarresposta', (req, res) => {
 		.catch(err => res.send('erro: ' + err));
 });
 
-/* app.get('/perguntarespostas/:id', (req, res) => {
-	const id = req.params.id;
-	Pergunta.findOne({
-		where: { id: id },
-		raw: true,
-	}).then(pergunta => {
-		if (pergunta != undefined) res.render('pergunta', { pergunta: pergunta });
-		else res.redirect('/');
-	});
-}); */
-
 //
 app.listen(port, () => console.log('Servidor rodando!'));
